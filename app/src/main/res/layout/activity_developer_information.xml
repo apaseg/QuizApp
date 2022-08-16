@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@drawable/developer_screen"
+    tools:context=".DeveloperInformation">
+
+    <TextView
+        android:id="@+id/tvDevelopers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:text="Developers"
+        android:textColor="@color/darkGreen"
+        android:textStyle="bold"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/rlFirst"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDevelopers">
+
+        <TextView
+            android:id="@+id/tvLogo1"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/circle"
+            android:gravity="center"
+            android:text="A"
+            android:textColor="@color/white"
+            android:textSize="80dp" />
+
+        <TextView
+            android:id="@+id/tvName1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="13dp"
+            android:layout_toRightOf="@+id/tvLogo1"
+            android:text="Anmol Tiwari"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/tvEmail1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvName1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/tvLogo1"
+            android:text="tiwarianmol163@gmail.com"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlSecond"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlFirst">
+
+        <TextView
+            android:id="@+id/tvLogo2"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/circle2"
+            android:gravity="center"
+            android:text="A"
+            android:textColor="@color/white"
+            android:textSize="80dp" />
+
+        <TextView
+            android:id="@+id/tvName2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Anmol"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="13dp"
+            android:layout_toRightOf="@+id/tvLogo2"/>
+
+        <TextView
+            android:id="@+id/tvEmail2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20bcs054@nith.ac.in"
+            android:textSize="20sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/tvLogo2"
+            android:layout_below="@id/tvName2"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Back"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlSecond" />
+</androidx.constraintlayout.widget.ConstraintLayout>

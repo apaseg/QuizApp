@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="18dp"
+    android:background="@drawable/quiz_background"
+    tools:context=".QuestionScreen">
+
+    <TextView
+        android:id="@+id/tvGreet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello Bro"
+        android:textColor="@color/teal_700"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:id="@id/llQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="124dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvQuestionCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="6dp"
+            android:text="@string/Question_count"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tvQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Question"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/rgChoices"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llQuestion">
+
+        <RadioButton
+            android:id="@+id/rbOption1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="checkAnswer"
+            android:textSize="15sp"
+            android:text="Option 1" />
+
+        <RadioButton
+            android:id="@+id/rbOption2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="checkAnswer"
+            android:textSize="15sp"
+            android:text="Option 2" />
+
+        <RadioButton
+            android:id="@+id/rbOption3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="checkAnswer"
+            android:textSize="15sp"
+            android:text="Option 3" />
+
+        <RadioButton
+            android:id="@+id/rbOption4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="checkAnswer"
+            android:text="Option 4"
+            android:textSize="15sp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Next Question"
+        android:backgroundTint="@color/orange"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgChoices" />
+
+    <Button
+        android:id="@+id/btnQuit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Quit"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvYourScore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnNext"
+        app:layout_constraintVertical_bias="0.049" />
+
+    <TextView
+        android:id="@+id/tvYourScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Score"
+        android:textSize="25sp"
+        android:textColor="@color/red"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvScoreNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:inputType="number"
+        android:textSize="25sp"
+        android:textColor="@color/red"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
